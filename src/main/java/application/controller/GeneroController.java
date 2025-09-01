@@ -27,7 +27,7 @@ public class GeneroController {
     }
 
     @GetMapping("/{id}")
-    public GeneroDTO getOne(long id) {
+    public GeneroDTO getOne(@PathVariable long id) {
         return generoService.getOne(id);
     }
 
@@ -41,7 +41,7 @@ public class GeneroController {
         return generoService.update(id, novosDados);
     }
 
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public void delete(@PathVariable long id) {
         generoService.delete(id);
     }
