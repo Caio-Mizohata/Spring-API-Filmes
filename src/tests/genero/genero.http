@@ -1,0 +1,29 @@
+@url = https://organic-guide-jxprjwpq66g2jp96-8080.app.github.dev/generos
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "nome": "Mistério"
+}
+
+###
+
+GET {{url}}
+
+###
+
+GET {{url}}/10
+
+###
+
+PUT {{url}}/10
+Content-Type: application/json
+
+{
+    "nome": "Presidente"
+}
+
+###
+
+DELETE {{url}}/10
