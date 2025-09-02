@@ -1,0 +1,30 @@
+@url = https://organic-guide-jxprjwpq66g2jp96-8080.app.github.dev/filmes
+
+GET {{url}}
+
+###
+
+GET {{url}}/7
+
+###
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "titulo": "Sword Art Online",
+    "idGenero": 1
+}
+
+###
+
+PUT {{url}}/7
+
+{
+    "titulo": "Sword Art Online - Alicization",
+    "idGenero": 7
+}
+
+###
+
+DELETE {{url}}/7

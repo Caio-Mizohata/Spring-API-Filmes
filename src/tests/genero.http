@@ -4,7 +4,7 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "nome": "Mistério"
+    "nome": "Anime"
 }
 
 ###
@@ -13,11 +13,11 @@ GET {{url}}
 
 ###
 
-GET {{url}}/10
+GET {{url}}/4
 
 ###
 
-PUT {{url}}/10
+PUT {{url}}/9
 Content-Type: application/json
 
 {
@@ -26,4 +26,4 @@ Content-Type: application/json
 
 ###
 
-DELETE {{url}}/10
+DELETE {{url}}/9
