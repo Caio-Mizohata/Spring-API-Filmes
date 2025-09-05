@@ -12,19 +12,20 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "titulo": "Sword Art Online",
-    "idGenero": 1
+    "titulo" : "Gente Grande1",
+    "idGenero" : 4
 }
 
 ###
 
-PUT {{url}}/7
+PUT {{url}}/2
+Content-Type: application/json
 
 {
-    "titulo": "Sword Art Online - Alicization",
-    "idGenero": 7
+    "titulo": "A Freira",
+    "idGenero": 2
 }
 
 ###
 
-DELETE {{url}}/7
+DELETE {{url}}/8

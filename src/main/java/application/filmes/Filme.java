@@ -23,8 +23,8 @@ import lombok.Setter;
 public class Filme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private long id;
+    @Column(nullable = false)
     private String titulo;
 
     @ManyToOne

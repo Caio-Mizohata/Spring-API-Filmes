@@ -30,14 +30,14 @@ public class GeneroService {
         return new GeneroDTO(generoRepo.save(new Genero(dados)));
     }
 
-    public GeneroDTO update(long id, GeneroInsertDTO dadosGeneros) {
+    public GeneroDTO update(long id, GeneroInsertDTO dadosGenero) {
         Optional<Genero> resultado = generoRepo.findById(id);
         
         if (resultado.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Gênero não encontrado");
         }
 
-        resultado.get().setNome(dadosGeneros.nome());
+        resultado.get().setNome(dadosGenero.nome());
 
         return new GeneroDTO(generoRepo.save(resultado.get()));
     }

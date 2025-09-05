@@ -27,9 +27,9 @@ public class FilmeController {
         return this.filmeService.getOne(id);
     }
 
-    @PostMapping("/{id}")
-    public FilmeDTO insert(@RequestBody FilmeInsertDTO novoFilme) {
-        return this.filmeService.insert(novoFilme);
+    @PostMapping
+    public FilmeDTO insert(@RequestBody FilmeInsertDTO dadosNovos) {
+        return this.filmeService.insert(dadosNovos);
     }
 
     @PutMapping("/{id}")

@@ -23,7 +23,7 @@ public class Genero {
     private String nome;
 
     public Genero(GeneroDTO dados) {
-        this.setId(id);
+        this.setId(dados.id());
         this.setNome(dados.nome());
     }
 
