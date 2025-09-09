@@ -1,0 +1,29 @@
+@url = https://organic-guide-jxprjwpq66g2jp96-8080.app.github.dev/artistas
+
+GET {{url}}
+
+###
+
+GET {{url}}/3
+
+###
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "nome" : "Kayaba Akihiko"
+}
+
+###
+
+PUT {{url}}/2
+Content-Type: application/json
+
+{
+    "nome": "Keanu Reeves"
+}
+
+###
+
+DELETE {{url}}/2

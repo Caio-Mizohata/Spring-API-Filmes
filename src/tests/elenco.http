@@ -1,0 +1,33 @@
+@url = https://organic-guide-jxprjwpq66g2jp96-8080.app.github.dev/elencos
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "idFilme": 1,
+    "idArtista": 1,
+    "idFuncao": 1
+}
+
+###
+
+GET {{url}}
+
+###
+
+GET {{url}}/4
+
+###
+
+PUT {{url}}/9
+Content-Type: application/json
+
+{
+    "idFilme": 1,
+    "idArtista": 2,
+    "idFuncao": 3
+}
+
+###
+
+DELETE {{url}}/1

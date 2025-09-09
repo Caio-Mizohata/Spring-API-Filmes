@@ -1,0 +1,29 @@
+@url = https://organic-guide-jxprjwpq66g2jp96-8080.app.github.dev/funcao
+
+GET {{url}}
+
+###
+
+GET {{url}}/3
+
+###
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "descricao" : "Protagonista"
+}
+
+###
+
+PUT {{url}}/1
+Content-Type: application/json
+
+{
+    "descricao": "Antagonista"
+}
+
+###
+
+DELETE {{url}}/2

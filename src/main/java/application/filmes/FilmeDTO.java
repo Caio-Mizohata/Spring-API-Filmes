@@ -3,7 +3,7 @@ package application.filmes;
 import application.generos.GeneroDTO;
 
 public record FilmeDTO(long id, String titulo, GeneroDTO genero) {
-    FilmeDTO (Filme dados) {
+    public FilmeDTO (Filme dados) {
         this(dados.getId(), dados.getTitulo(), new GeneroDTO(dados.getGenero()));
     }
 }

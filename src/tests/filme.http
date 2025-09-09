@@ -12,8 +12,8 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "titulo" : "Gente Grande1",
-    "idGenero" : 4
+    "titulo" : "Sword Art Online",
+    "idGenero" : 1
 }
 
 ###
@@ -28,4 +28,4 @@ Content-Type: application/json
 
 ###
 
-DELETE {{url}}/8
+DELETE {{url}}/2

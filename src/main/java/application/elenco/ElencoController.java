@@ -1,5 +1,6 @@
-package application.elenco.funcao;
+package application.elenco;
 
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,36 +9,35 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/funcao")
-public class FuncaoController {
+@RequestMapping("/elencos")
+public class ElencoController {
     @Autowired
-    FuncaoService funcaoService;
+    private ElencoService elencoService;
 
     @GetMapping
-    public Iterable<FuncaoDTO> getAll() {
-        return this.funcaoService.getAll();
+    public Iterable<ElencoDTO> getAll() {
+        return elencoService.getAll();
     }
 
     @GetMapping("/{id}")
-    public FuncaoDTO getOne(@PathVariable long id) {
-        return this.funcaoService.getOne(id);
+    public ElencoDTO getOne(@PathVariable long id) {
+        return elencoService.getOne(id);
     }
 
     @PostMapping
-    public FuncaoDTO insert(@RequestBody FuncaoInsertDTO dadosNovos) {
-        return this.funcaoService.insert(dadosNovos);
+    public ElencoDTO insert(@RequestBody ElencoInsertDTO dados) {
+        return elencoService.insert(dados);
     }
 
     @PutMapping("/{id}")
-    public FuncaoDTO update(@PathVariable long id, @RequestBody FuncaoInsertDTO dados) {
-        return this.funcaoService.update(id, dados);
+    public ElencoDTO update(@PathVariable long id, @RequestBody ElencoInsertDTO dados) {
+        return elencoService.update(id, dados);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable long id) {
-        this.funcaoService.delete(id);
+        elencoService.delete(id);
     }
 }

@@ -4,7 +4,7 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "nome": "Comedia"
+    "nome": "Anime"
 }
 
 ###
