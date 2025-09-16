@@ -52,6 +52,7 @@ public class FilmeService {
 
     public FilmeDTO update(Long id, FilmeInsertDTO novosDados) {
         Optional<Filme> resultado = filmeRepo.findById(id);
+        Set<Produtora> produtoras = novosDados.IdsProdutoras().stream().map(p -> new Produtora(produtoraService.getOne(p))).collect(Collectors.toSet());
 
         if (resultado.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Filme não encontrado");
@@ -61,6 +62,7 @@ public class FilmeService {
 
         resultado.get().setTitulo(novosDados.titulo());
         resultado.get().setGenero(genero);
+        resultado.get().setProdutoras(produtoras);
 
         return new FilmeDTO(filmeRepo.save(resultado.get()));
     }

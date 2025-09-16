@@ -1,4 +1,4 @@
-@url = https://organic-guide-jxprjwpq66g2jp96-8080.app.github.dev/filmes
+@url = https://verbose-space-waddle-px57jq5pqx737g4w-8080.app.github.dev/filmes
 
 GET {{url}}
 
@@ -13,7 +13,8 @@ Content-Type: application/json
 
 {
     "titulo" : "Sword Art Online",
-    "idGenero" : 1
+    "idGenero" : 1,
+    "IdsProdutoras" : [1]
 }
 
 ###
