@@ -1,0 +1,27 @@
+@url = https://organic-guide-jxprjwpq66g2jp96-8080.app.github.dev/produtoras
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "nome": "Kadokawa"
+}
+
+###
+GET {{url}}
+
+###
+
+GET {{url}}/2
+
+###
+PUT {{url}}/3
+Content-Type: application/json
+
+{
+    "nome": "Kadokawa"
+}
+
+###
+
+DELETE {{url}}/4
