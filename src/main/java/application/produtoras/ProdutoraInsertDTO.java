@@ -1,4 +1,4 @@
-package application.produtora;
+package application.produtoras;
 
 public record ProdutoraInsertDTO(String nome) {
     public ProdutoraInsertDTO(Produtora dados) {

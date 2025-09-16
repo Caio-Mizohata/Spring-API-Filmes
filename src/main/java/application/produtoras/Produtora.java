@@ -1,4 +1,4 @@
-package application.produtora;
+package application.produtoras;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,5 +29,9 @@ public class Produtora {
 
     public Produtora(ProdutoraInsertDTO dados) {
         this.setNome(dados.nome());
+    }
+
+    public Produtora(long id) {
+        this.setId(id);
     }
 }

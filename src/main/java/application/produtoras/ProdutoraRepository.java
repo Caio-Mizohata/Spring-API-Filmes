@@ -1,4 +1,4 @@
-package application.produtora;
+package application.produtoras;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

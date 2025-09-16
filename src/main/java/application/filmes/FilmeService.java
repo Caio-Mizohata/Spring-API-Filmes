@@ -1,6 +1,8 @@
 package application.filmes;
 
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +11,8 @@ import org.springframework.web.server.ResponseStatusException;
 
 import application.generos.GeneroService;
 import application.generos.Genero;
+import application.produtoras.Produtora;
+import application.produtoras.ProdutoraService;
 
 
 @Service
@@ -17,6 +21,8 @@ public class FilmeService {
     private FilmeRepository filmeRepo;
     @Autowired
     private GeneroService generoService;
+    @Autowired
+    private ProdutoraService produtoraService;
 
     public Iterable<FilmeDTO> getAll() {
         return filmeRepo.findAll().stream().map(FilmeDTO::new).toList();
@@ -34,10 +40,12 @@ public class FilmeService {
 
     public FilmeDTO insert(FilmeInsertDTO novoFilme) {
         Genero genero = new Genero(generoService.getOne(novoFilme.idGenero()));
+        Set<Produtora> produtoras = novoFilme.IdsProdutoras().stream().map(p -> new Produtora(produtoraService.getOne(p))).collect(Collectors.toSet());
 
         Filme filme = new Filme();
         filme.setTitulo(novoFilme.titulo());
         filme.setGenero(genero);
+        filme.setProdutoras(produtoras);
 
         return new FilmeDTO(filmeRepo.save(filme));
     }
