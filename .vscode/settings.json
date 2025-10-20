@@ -9,5 +9,6 @@
         ".gitpod.yml": true,
         "build": true,
     },
-    "java.compile.nullAnalysis.mode": "disabled"
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
