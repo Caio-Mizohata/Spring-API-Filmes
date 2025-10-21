@@ -1,7 +1,7 @@
 USE application;
 
 CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nome_de_usuario VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL
 )

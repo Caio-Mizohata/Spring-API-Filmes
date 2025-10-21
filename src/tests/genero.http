@@ -1,7 +1,9 @@
-@url = https://verbose-space-waddle-px57jq5pqx737g4w-8080.app.github.dev/generos
+@url = https://legendary-xylophone-ggvx4wv7vjv294p7-8080.app.github.dev/generos
+@token = 
 
 POST {{url}}
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
     "nome": "Anime"
@@ -10,6 +12,7 @@ Content-Type: application/json
 ###
 
 GET {{url}}
+Authorization: Bearer {{token}}
 
 ###
 
